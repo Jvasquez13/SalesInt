@@ -1,11 +1,46 @@
 {
   "version": 3,
   "targets": {
-    "net7.0": {}
+    "net7.0": {
+      "Sales.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/Sales.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Sales.Domain.dll": {}
+        }
+      },
+      "Sales.Infraestructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/Sales.Infraestructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Sales.Infraestructure.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Sales.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Sales.Domain/Sales.Domain.csproj",
+      "msbuildProject": "../Sales.Domain/Sales.Domain.csproj"
+    },
+    "Sales.Infraestructure/1.0.0": {
+      "type": "project",
+      "path": "../Sales.Infraestructure/Sales.Infraestructure.csproj",
+      "msbuildProject": "../Sales.Infraestructure/Sales.Infraestructure.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net7.0": []
+    "net7.0": [
+      "Sales.Domain >= 1.0.0",
+      "Sales.Infraestructure >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\ESTUDIANTE\\.nuget\\packages\\": {},
@@ -39,7 +74,14 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\ESTUDIANTE\\source\\repos\\SalesInt\\Sales\\Sales.Domain\\Sales.Domain.csproj": {
+              "projectPath": "C:\\Users\\ESTUDIANTE\\source\\repos\\SalesInt\\Sales\\Sales.Domain\\Sales.Domain.csproj"
+            },
+            "C:\\Users\\ESTUDIANTE\\source\\repos\\SalesInt\\Sales\\Sales.Infraestructure\\Sales.Infraestructure.csproj": {
+              "projectPath": "C:\\Users\\ESTUDIANTE\\source\\repos\\SalesInt\\Sales\\Sales.Infraestructure\\Sales.Infraestructure.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
